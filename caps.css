@@ -92,9 +92,9 @@ img{
     color: rgba(230, 216, 214, 1);
     text-align: center;
 }
-@media and (max-width: 205px){
+@media (max-width: 205px){
     .first-para{
-        font-size: 2vw;
+        font-size: 1vw;
         padding: 1vw;
     }
 }
@@ -113,11 +113,7 @@ img{
     margin-top: 5vw;
     transition: 1s ease in;
 }
-@media and (max-width: 205px){
-    .button1{
-        height: 8vw;
-    }
-}
+
 .button1:hover{
     background-color: #218838;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -131,6 +127,10 @@ img{
     display: flex;
     margin-bottom: 6vw;
 }
+.img2:hover{
+    box-shadow: 10px 10px 20px darkolivegreen;
+}
+
 
 .second-h2{
     color: rgba(230, 216, 214, 1);
@@ -278,3 +278,27 @@ img{
     color: black;
 }
 
+.second-h2,
+.second-p {
+    opacity: 1;
+    transform: translateY(50px);
+    animation: fadeUp 10s ease-out forwards infinite;
+}
+
+.second-h2 {
+    animation-delay: 0.3s;
+}
+
+.second-p {
+    animation-delay: 0.6s;
+}
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
